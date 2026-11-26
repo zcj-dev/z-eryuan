@@ -3,13 +3,13 @@
 ## 打包 Windows 安装包
 
 ```powershell
-cd C:\Users\chan\Desktop\z-wuminglang
+cd C:\Users\chan\Desktop\z-eryuan
 npm run pack
 ```
 
-输出文件：`release/Z 梧墨朗-1.0.0-setup.exe`
+输出文件：`release/Z 二次元-1.0.0-setup.exe`
 
-安装后桌面会创建 `Z 梧墨朗` 快捷方式。
+安装后桌面会创建 `Z 二次元` 快捷方式。
 
 ## 打包目录版（免安装）
 
@@ -17,7 +17,7 @@ npm run pack
 npm run pack:dir
 ```
 
-输出到 `release/win-unpacked/`，可直接运行 `Z 梧墨朗.exe`。
+输出到 `release/win-unpacked/`，可直接运行 `Z 二次元.exe`。
 
 ## 配置文件说明
 

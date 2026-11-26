@@ -1,6 +1,6 @@
 {
-  "productName": "Z 梧墨朗",
-  "appId": "com.z.wuminglang.desktop",
+  "productName": "Z 二次元",
+  "appId": "com.z.eryuan.desktop",
   "directories": {
     "output": "release"
   },
@@ -23,6 +23,6 @@
     "oneClick": false,
     "allowToChangeInstallationDirectory": true,
     "createDesktopShortcut": "always",
-    "shortcutName": "Z 梧墨朗"
+    "shortcutName": "Z 二次元"
   }
 }

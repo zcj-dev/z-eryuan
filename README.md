@@ -1,8 +1,8 @@
-# Z 梧墨朗 (Z WuMingLang)
+# Z 二次元 (Z Eryuan)
 
 你自己的云端 API 套壳桌面应用。接入自有算力端点，对话数据在本机，模型你自选。
 
-[![GitHub release](https://img.shields.io/github/v/release/zcj-dev/z-wuminglang)](https://github.com/zcj-dev/z-wuminglang/releases)
+[![GitHub release](https://img.shields.io/github/v/release/zcj-dev/z-eryuan)](https://github.com/zcj-dev/z-eryuan/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Electron](https://img.shields.io/badge/electron-31.x-4F8CFF.svg)](https://www.electronjs.org/)
 
@@ -10,7 +10,7 @@
 
 ## 项目简介
 
-**Z 梧墨朗** 是一个极简的云端 API 桌面套壳应用，基于 Electron 构建。
+**Z 二次元** 是一个极简的云端 API 桌面套壳应用，基于 Electron 构建。
 
 它不绑定任何官方模型，也不主动联网。你只需在「设置」里填入你自己的云端 API 端点（Base URL）、API Key 和模型名称，即可把它变成**你私有的对话客户端**。所有配置仅保存在本机，不会上传到任何服务器。
 
@@ -42,14 +42,14 @@
 双击以下文件，用默认浏览器打开即可：
 
 ```
-C:\Users\chan\Desktop\z-wuminglang\src\renderer\index.html
+C:\Users\chan\Desktop\z-eryuan\src\renderer\index.html
 ```
 
 ### 方式二：Electron 桌面应用
 
 ```powershell
 # 进入项目目录
-cd C:\Users\chan\Desktop\z-wuminglang
+cd C:\Users\chan\Desktop\z-eryuan
 
 # 安装依赖
 npm install
@@ -61,11 +61,11 @@ npm start
 ### 方式三：打包 Windows 安装包
 
 ```powershell
-cd C:\Users\chan\Desktop\z-wuminglang
+cd C:\Users\chan\Desktop\z-eryuan
 npm run pack
 ```
 
-输出到 `release/` 目录，安装后桌面会创建 `Z 梧墨朗` 快捷方式。
+输出到 `release/` 目录，安装后桌面会创建 `Z 二次元` 快捷方式。
 
 ---
 
@@ -93,7 +93,7 @@ npm run pack
 ## 项目结构
 
 ```
-z-wuminglang/
+z-eryuan/
 ├── README.md
 ├── LICENSE
 ├── CONTRIBUTING.md

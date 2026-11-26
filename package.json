@@ -1,17 +1,17 @@
 {
-  "name": "z-wuminglang",
-  "productName": "Z 梧墨朗",
+  "name": "z-eryuan",
+  "productName": "Z 二次元",
   "version": "1.0.0",
   "description": "你自己的云端 API 套壳桌面应用，接入自有算力端点，对话数据在本机，模型你自选",
   "author": "Zhiwei",
   "license": "MIT",
-  "homepage": "https://github.com/zcj-dev/z-wuminglang",
+  "homepage": "https://github.com/zcj-dev/z-eryuan",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zcj-dev/z-wuminglang.git"
+    "url": "git+https://github.com/zcj-dev/z-eryuan.git"
   },
   "bugs": {
-    "url": "https://github.com/zcj-dev/z-wuminglang/issues"
+    "url": "https://github.com/zcj-dev/z-eryuan/issues"
   },
   "keywords": [
     "electron",

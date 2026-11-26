@@ -5,7 +5,7 @@
 ### 新增
 - 基于 Electron 的桌面套壳应用
 - 云端 API 配置（Base URL / API Key / Model）
-- 对话气泡界面（用户 / Z 梧墨朗）
+- 对话气泡界面（用户 / Z 二次元）
 - Markdown 简单渲染（代码块、行内代码、换行、链接）
 - 本地配置持久化（localStorage / config.json）
 - DID 身份生成（`did:zml:*`）

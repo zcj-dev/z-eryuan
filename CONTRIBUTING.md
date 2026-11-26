@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢你愿意参与 Z 梧墨朗的开发！
+感谢你愿意参与 Z 二次元的开发！
 
 ## 如何贡献
 
@@ -38,4 +38,4 @@ docs: update usage guide
 
 ## 问题反馈
 
-使用 [GitHub Issues](https://github.com/zcj-dev/z-wuminglang/issues) 提交 Bug 报告或功能请求。
+使用 [GitHub Issues](https://github.com/zcj-dev/z-eryuan/issues) 提交 Bug 报告或功能请求。

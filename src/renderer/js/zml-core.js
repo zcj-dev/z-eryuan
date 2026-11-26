@@ -1,5 +1,5 @@
 /**
- * Z 梧墨朗 · 核心模块（浏览器原生 JS，无模块系统依赖）
+ * Z 二次元 · 核心模块（浏览器原生 JS，无模块系统依赖）
  * 提供：DID 生成、消息气泡、Toast 提示、Markdown 简单渲染
  */
 
@@ -39,7 +39,7 @@ const zmlCore = (() => {
     meta.className = 'msg meta';
     meta.textContent = role === 'user'
       ? '用户 · ' + new Date().toLocaleTimeString()
-      : 'Z 梧墨朗 · ' + new Date().toLocaleTimeString();
+      : 'Z 二次元 · ' + new Date().toLocaleTimeString();
 
     wrap.appendChild(div);
     wrap.appendChild(meta);
