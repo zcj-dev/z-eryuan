@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z 梧墨朗 · 你的云端 API 套壳</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <aside class="sidebar">
+    <div class="brand">Z 梧墨朗</div>
+    <div class="subtitle">你的云端 API · 数据在本机 · 模型你自选</div>
+
+    <div class="did-box">
+      DID 身份：<span id="didValue">生成中...</span>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-view="chat">
+        <span class="k">💬</span>对话
+      </button>
+      <button class="nav-item" data-view="settings">
+        <span class="k">⚙</span>设置
+      </button>
+    </nav>
+
+    <div class="footer">
+      Z 梧墨朗 v1.0<br>你的云端 API 套壳
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="view active" id="view-chat">
+      <div class="api-status" id="apiStatus">
+        <span class="dot"></span>
+        <span id="apiStatusText">未配置 API</span>
+      </div>
+      <div id="chat-wrap">
+        <div id="messages"></div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="输入问题...（回车发送）" autocomplete="off">
+        <button class="btn-send" id="btnSend">发送</button>
+      </div>
+    </section>
+
+    <section class="view" id="view-settings">
+      <h2>云端 API 设置</h2>
+      <div class="settings-grid">
+        <div class="field">
+          <label>Base URL</label>
+          <input type="text" id="inpBaseURL" placeholder="https://api.yourdomain.com/v1">
+          <span class="hint">你的云端 API 端点，例如 https://api.example.com/v1</span>
+        </div>
+        <div class="field">
+          <label>API Key</label>
+          <input type="password" id="inpApiKey" placeholder="sk-...">
+        </div>
+        <div class="field">
+          <label>Model</label>
+          <input type="text" id="inpModel" placeholder="deepseek-chat / llama-3 等">
+          <span class="hint">你云端提供的模型名称</span>
+        </div>
+      </div>
+      <div style="margin-top:16px;">
+        <button class="btn" onclick="app.saveApiConfig()">保存配置</button>
+        <button class="btn secondary" onclick="app.testApiConnection()">测试连接</button>
+      </div>
+      <div id="apiResult" class="hint"></div>
+
+      <div class="select-panel" style="margin-top:24px;">
+        <h4>快速预设</h4>
+        <div class="option" onclick="app.setPreset('custom')">
+          <input type="radio" name="preset" value="custom"> 自定义云端 API
+        </div>
+        <div class="option" onclick="app.setPreset('litellm')">
+          <input type="radio" name="preset" value="litellm"> LiteLLM 本地（http://localhost:4000/v1）
+        </div>
+        <div class="option" onclick="app.setPreset('ollama')">
+          <input type="radio" name="preset" value="ollama"> Ollama 本地（http://localhost:11434/v1）
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/storage.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

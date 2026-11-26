@@ -1,0 +1,29 @@
+{
+  "productName": "Z 梧墨朗",
+  "appId": "com.z.wuminglang.desktop",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "src/**/*",
+    "package.json",
+    "!tests/**/*",
+    "!node_modules/**/*"
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ],
+    "artifactName": "${productName}-${version}-setup.${ext}",
+    "createDesktopShortcut": "always"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": "always",
+    "shortcutName": "Z 梧墨朗"
+  }
+}

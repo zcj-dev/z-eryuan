@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+release/
+build/
+out/
+
+# Electron
+electron.zip
+electron.exe
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local config (never commit secrets)
+.env
+.env.local
+config.local.json
+config.json

@@ -1,0 +1,20 @@
+{
+  "name": "z-wuminglang",
+  "productName": "Z 梧墨朗",
+  "version": "1.0.0",
+  "description": "你自己的云端 API 套壳桌面应用，接入自有算力端点，对话数据在本机",
+  "author": "Zhiwei",
+  "license": "MIT",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "pack": "electron-builder --win --x64 --publish never",
+    "pack:dir": "electron-builder --dir --win --x64 --publish never",
+    "test": "node tests/smoke.test.js"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^25.1.8"
+  }
+}
