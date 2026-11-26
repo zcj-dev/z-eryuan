@@ -1,4 +1,4 @@
-/* ===== Z 二次元 · 前端样式（重做版） ===== */
+/* ===== Z 二次元 · 前端样式（完整版） ===== */
 
 :root {
   --bg: #0b0c10;
@@ -75,7 +75,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 12px 14px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   font-size: 11px;
   color: var(--muted);
   display: flex;
@@ -92,6 +92,30 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.sidebar-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.btn-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.btn-icon:hover { background: #1f2330; border-color: var(--border); }
 
 .nav {
   display: flex;
@@ -123,6 +147,51 @@ body {
 }
 
 .nav-item .nav-icon { font-size: 14px; }
+
+.sessions {
+  margin-bottom: auto;
+}
+
+.section-title {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#sessionList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.session-item {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text);
+  transition: all 0.15s;
+  overflow: hidden;
+}
+
+.session-item:hover { background: #1f2330; border-color: var(--border); }
+.session-item.active { border-color: var(--accent); background: #1a2030; }
+
+.session-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.session-time {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 4px;
+}
 
 .api-status-sidebar {
   background: var(--bg);
@@ -400,7 +469,8 @@ body {
 
 .field label .required { color: var(--danger); }
 
-.field input {
+.field input,
+.field textarea {
   padding: 10px 14px;
   border-radius: 10px;
   border: 1px solid var(--border);
@@ -408,9 +478,13 @@ body {
   color: var(--text);
   font-size: 14px;
   outline: none;
+  font-family: inherit;
 }
 
-.field input:focus { border-color: var(--accent); }
+.field input:focus,
+.field textarea:focus { border-color: var(--accent); }
+
+.field textarea { resize: vertical; min-height: 70px; }
 
 .hint {
   font-size: 11px;

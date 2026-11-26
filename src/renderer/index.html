@@ -20,6 +20,11 @@
       <span class="did-value" id="didValue">生成中...</span>
     </div>
 
+    <div class="sidebar-actions">
+      <button class="btn-icon" id="btnNewSession" title="新建会话">🆕</button>
+      <button class="btn-icon" id="btnDeleteSession" title="删除会话">🗑️</button>
+    </div>
+
     <nav class="nav">
       <button class="nav-item active" data-view="chat">
         <span class="nav-icon">💬</span>
@@ -31,13 +36,18 @@
       </button>
     </nav>
 
+    <div class="sessions">
+      <h3 class="section-title">会话</h3>
+      <div id="sessionList"></div>
+    </div>
+
     <div class="api-status-sidebar" id="apiStatusSidebar">
       <span class="dot" id="statusDot"></span>
       <span class="dot-text" id="statusText">未配置</span>
     </div>
 
     <div class="sidebar-footer">
-      Z 二次元 v1.0<br>云端 API 套壳
+      Z 二次元 v2.0<br>云端 API 套壳
     </div>
   </aside>
 
@@ -47,6 +57,9 @@
       <h1 id="pageTitle">对话</h1>
       <div class="header-actions">
         <button class="btn-icon" id="btnClearChat" title="清空对话">🗑️</button>
+        <button class="btn-icon" id="btnStop" title="停止生成">⏹</button>
+        <button class="btn-icon" id="btnRetry" title="重试上一条">🔄</button>
+        <button class="btn-icon" id="btnExport" title="导出会话">📤</button>
       </div>
     </header>
 
@@ -100,6 +113,18 @@
             <input type="text" id="inpModel" placeholder="deepseek-chat / llama-3 等">
             <span class="hint">你云端提供的模型名称</span>
           </div>
+
+          <div class="field">
+            <label>Temperature</label>
+            <input type="number" id="inpTemperature" min="0" max="2" step="0.1" value="0.7">
+            <span class="hint">越高越随机，越低越确定</span>
+          </div>
+
+          <div class="field">
+            <label>系统提示词</label>
+            <textarea id="inpSystemPrompt" rows="3" placeholder="你是 Z 二次元，一个直接、清晰、乐于助人的 AI 助手。"></textarea>
+            <span class="hint">对每次对话的系统行为说明</span>
+          </div>
         </div>
 
         <div class="settings-actions">
@@ -132,8 +157,22 @@
 <div class="toast" id="toast"></div>
 
 <script src="js/zml-core.js"></script>
+<script src="js/zml-state.js"></script>
 <script src="js/zml-settings.js"></script>
 <script src="js/zml-chat.js"></script>
 <script src="js/zml-app.js"></script>
+<script>
+window.desktop.bootstrap().then(info => {
+  window._currentConfig = info.config;
+  zmlCore.updateStatusBar('statusDot', 'statusText', !!info.config.baseURL, info.config.model, info.config.baseURL);
+  zmlCore.updateStatusBar('barDot', 'barText', !!info.config.baseURL, info.config.model, info.config.baseURL);
+  window.app = Object.assign({}, zmlApp, {
+    saveApiConfig: zmlSettings.saveApiConfig,
+    testApiConnection: zmlSettings.testApiConnection,
+    setPreset: zmlSettings.setPreset
+  });
+  zmlApp.init();
+});
+</script>
 </body>
 </html>

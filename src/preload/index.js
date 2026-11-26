@@ -1,7 +1,9 @@
 const { contextBridge, ipcRenderer } = require('electron')
 
-contextBridge.exposeInMainWorld('zmlAPI', {
-  getApiConfig: () => ipcRenderer.invoke('zml:get-api-config'),
-  setApiConfig: (config) => ipcRenderer.invoke('zml:set-api-config', config),
-  chatCompletion: (payload) => ipcRenderer.invoke('zml:chat-completion', payload)
-})
+contextBridge.exposeInMainWorld('desktop', Object.freeze({
+  bootstrap: () => ipcRenderer.invoke('app:bootstrap'),
+  saveSettings: (config) => ipcRenderer.invoke('settings:save', config),
+  sendMessage: (payload) => ipcRenderer.invoke('chat:send', payload),
+  cancelMessage: (requestId) => ipcRenderer.invoke('chat:cancel', requestId),
+  exportData: (contents) => ipcRenderer.invoke('data:export', contents)
+}))
