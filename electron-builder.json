@@ -17,8 +17,7 @@
         "arch": ["x64"]
       }
     ],
-    "artifactName": "${productName}-${version}-setup.${ext}",
-    "createDesktopShortcut": "always"
+    "artifactName": "${productName}-${version}-setup.${ext}"
   },
   "nsis": {
     "oneClick": false,

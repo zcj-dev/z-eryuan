@@ -2,9 +2,25 @@
   "name": "z-wuminglang",
   "productName": "Z 梧墨朗",
   "version": "1.0.0",
-  "description": "你自己的云端 API 套壳桌面应用，接入自有算力端点，对话数据在本机",
+  "description": "你自己的云端 API 套壳桌面应用，接入自有算力端点，对话数据在本机，模型你自选",
   "author": "Zhiwei",
   "license": "MIT",
+  "homepage": "https://github.com/zcj-dev/z-wuminglang",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zcj-dev/z-wuminglang.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zcj-dev/z-wuminglang/issues"
+  },
+  "keywords": [
+    "electron",
+    "api-client",
+    "chat",
+    "llm",
+    "local-first",
+    "openai-compatible"
+  ],
   "main": "src/main/index.js",
   "scripts": {
     "start": "electron .",
@@ -16,5 +32,8 @@
   "devDependencies": {
     "electron": "^31.0.0",
     "electron-builder": "^25.1.8"
+  },
+  "allowScripts": {
+    "electron@31.7.7": true
   }
 }
